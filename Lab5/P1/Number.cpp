@@ -150,7 +150,7 @@ char  Number::operator[ ](int i)
 	return this->n[i];
 }
 
-void Number::operator=(Number n1)
+void Number::operator=(const Number& n1)
 {
 	this->a = n1.a;
 	this->b = n1.b;
@@ -165,7 +165,7 @@ Number Number::operator+ (Number n1)
 	n1.SwitchBase(16);
 	return n1;
 }
-Number Number::operator- (Number n1)
+Number Number::operator- ( Number n1)
 {
 
 	n1.a = this->a - n1.a;
@@ -174,7 +174,7 @@ Number Number::operator- (Number n1)
 	return n1;
 }
 
-bool Number:: operator> (Number n1)
+bool Number:: operator> (const Number& n1)
 {
 	return (this->a > n1.a);
 }
@@ -186,7 +186,7 @@ void Number::operator= (int n)
 	this->SwitchBase(this->b);
 }
 
-void Number::operator+= (Number n1)
+void Number::operator+= (const Number& n1)
 {
 	this->a = this->a + n1.a;
 	this->b = 16;

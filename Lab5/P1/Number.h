@@ -34,17 +34,17 @@ public:
 	// add operators
 	char operator[](int i);
 
-	void operator=(Number n1);
+	void operator=(const Number& n1);
 
-	Number operator+ (Number n1);
+	Number operator+ ( Number n1);
 
 	Number operator- (Number n1);
 
-	bool operator> (Number n1);
+	bool operator> (const Number& n1);
 
 	void operator= (int n);
 
-	void operator+= (Number n1);
+	void operator+= (const Number& n1);
 
 	void operator= (const char* s);
 
