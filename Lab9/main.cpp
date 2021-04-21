@@ -1,6 +1,4 @@
 #include <iostream>
-#include <cstring>
-#include <stdio.h>
 #define MAX 1001
 using namespace std;
 
@@ -17,9 +15,6 @@ template <class K, class V>
 class Map
 {
     Item<K, V> items[MAX];
-    /*K key[MAX];
-    V value[MAX];
-    int index[MAX];*/
     int count = 0;
 
 public:
@@ -100,12 +95,11 @@ public:
     }
     Item<K, V>* begin()
     {
-        //return &index[0];
         return &items[0];
     }
     Item<K, V>* end()
     {
-        //return &index[count];
+       
         return &items[count];
     }
 
